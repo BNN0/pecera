@@ -1,1 +1,2 @@
 # peceradd
+#AYUDA, Y SI NOS DAMOS DE BAJA?
