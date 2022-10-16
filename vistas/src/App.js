@@ -4,6 +4,9 @@ import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Auth from "./Auth"
 
+import NavScrollExample from "./Home"
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +14,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
       </Routes>
       <Auth/>
+      <NavScrollExample/> 
     </BrowserRouter>
   )
 }
