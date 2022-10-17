@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import Login from "./Vistas/Auth"
@@ -11,9 +11,9 @@ function App() {
     <Router>
       <Routes>
 
-        <Route path="./" />
-        <Route path="./Home" element={<NavScrollExample />} />
-        <Route path="./Auth" element={<Login />} />
+        <Route path="/" element={<h1>Hola</h1>}/>
+        <Route path="/home" element={<NavScrollExample />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
      
     </Router>
