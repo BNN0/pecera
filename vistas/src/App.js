@@ -1,21 +1,23 @@
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Auth from "./Auth"
-
-import NavScrollExample from "./Home"
+import Login from "./Vistas/Auth"
+import NavScrollExample from "./Vistas/Home"
 
 
 function App() {
   return (
-    <BrowserRouter>
+   <>
+    <Router>
       <Routes>
-        <Route path="/auth" element={<Auth />} />
+
+        <Route path="./" />
+        <Route path="./Home" element={<NavScrollExample />} />
+        <Route path="./Auth" element={<Login />} />
       </Routes>
-      <Auth/>
-      <NavScrollExample/> 
-    </BrowserRouter>
+     
+    </Router>
+    </>
   )
 }
 

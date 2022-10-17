@@ -1,7 +1,7 @@
 
 import React, { useState } from "react"
 
-export default function (props) {
+export default function Login (props) {
   let [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
