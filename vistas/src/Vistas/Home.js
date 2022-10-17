@@ -88,8 +88,8 @@ function NavScrollExample() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="imagenes/tipscuidado.jpg"
-            alt="First slide"
+            src="https://www.wikihow.com/images_en/thumb/4/42/Take-Care-of-Your-Fish-Step-19-Version-2.jpg/v4-1200px-Take-Care-of-Your-Fish-Step-19-Version-2.jpg"
+            alt="First slide" width={50} height={550}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
