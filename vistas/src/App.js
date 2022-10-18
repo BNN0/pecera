@@ -5,15 +5,18 @@ import Login from "./Vistas/Auth"
 import NavScrollExample from "./Vistas/Home"
 
 
+
 function App() {
   return (
    <>
     <Router>
       <Routes>
 
-        <Route path="/" element={<h1>Bienvenide</h1>}/>
+        <Route path="/" element={<h1>CureFish</h1>}/>
         <Route path="/home" element={<NavScrollExample />} />
         <Route path="/login" element={<Login />} />
+
+
       </Routes>
      
     </Router>

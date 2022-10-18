@@ -10,7 +10,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
 
-import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
 
 
 function NavScrollExample() {
@@ -123,7 +123,7 @@ function NavScrollExample() {
         </Carousel.Item>
       </Carousel>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
         <h2 > Conocenos <Badge bg="secondary">Ahora</Badge></h2>
       </div>
 
@@ -146,7 +146,7 @@ function NavScrollExample() {
         <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
           <CDBBox display="flex" justifyContent="between" className="flex-wrap">
             <CDBBox>
-              <a href="" className="d-flex align-items-center p-0 text-dark">
+              <a href="/" className="d-flex align-items-center p-0 text-dark">
                 <img alt="logo" src="logo" width="30px" />
                 <span className="ml-3 h5 font-weight-bold">Devwares</span>
               </a>
