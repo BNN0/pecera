@@ -10,6 +10,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
 
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
+
 
 function NavScrollExample() {
   const [show, setShow] = useState(false);
@@ -129,30 +131,81 @@ function NavScrollExample() {
         <Accordion.Item eventKey="0">
           <Accordion.Header>¿Quienes somos?</Accordion.Header>
           <Accordion.Body>
-          <p>CureFish es una empresa mexicana especializada en la importación de productos de calidad para acuarios y acuicultura con más de 10 años de experiencia.</p>
+            <p>CureFish es una empresa mexicana especializada en la importación de productos de calidad para acuarios y acuicultura con más de 10 años de experiencia.</p>
 
-          <p>Contamos con artículos, los cuales cuentan con la certificaciones de las normas oficiales mexicanas aplicables, lo cual asegura que usted adquirirá sólo productos con los estándares de calidad más altos disponibles en el mercado. Le ofrecemos el mejor servicio, calidad de empaque, inventarios suficientes para proveer todas las necesidades en el cuidado de sus peces.</p>
+            <p>Contamos con artículos, los cuales cuentan con la certificaciones de las normas oficiales mexicanas aplicables, lo cual asegura que usted adquirirá sólo productos con los estándares de calidad más altos disponibles en el mercado. Le ofrecemos el mejor servicio, calidad de empaque, inventarios suficientes para proveer todas las necesidades en el cuidado de sus peces.</p>
 
-          <p>presentando ahora el más novedoso diseño de una pecera inteligente capaz de monitorear y alimentar automaticamente lo que le facilitara el cuidado de sus mascotas.</p>
+            <p>presentando ahora el más novedoso diseño de una pecera inteligente capaz de monitorear y alimentar automaticamente lo que le facilitara el cuidado de sus mascotas.</p>
 
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Tips y más sobre el cuidado de tus peces</Accordion.Header>
-          <Accordion.Body>
-            <h6>Información:</h6> <p>Antes de nada, acude a un centro veterinario especializado para informarte de los cuidados que requiere esa especie en concreto, y no te lances si no estás seguro de poder cumplir con todo lo necesario.</p> 
-            <h6>Acuario:</h6> <p>El tamaño del acuario es tan importante como para nosotros el de nuestra cama. Busca acuarios adecuados para las especies que quieres tener. Recuerda, siempre ir al tamaño más grande que te puedas permitir.</p> 
-            <h6>Agua limpia:</h6> <p>A todos nos gusta tener nuestra casa limpia, ¿verdad? Procura mantener el agua de los peces en perfecto estado para que puedan estar cómodos y disfrutar. Además la calidad del agua va a determinar el buen estado de salud del pez.</p>
-            <h6>Renovación del agua:</h6> <p>Se recomienda cambiar el 30% del agua de la pecera un par de veces por semana.</p>
-            <h6>Bomba de aire y filtro:</h6> <p>Los peces respiran oxígeno del agua, por lo que es esencial que tengan todo el que necesitan. Infórmate de qué necesita tu pez e instala la bomba necesaria.  Dependiendo de especies y tamaño también puede ser que necesites un filtro que depure y oxigene el agua.</p>
-            <h6>Temperatura:</h6> <p>¿Son peces de agua fría o de agua cálida? Tenlo claro y mantenlos a la temperatura adecuada.</p>
-            <h6>Iluminación:</h6> <p>No dejes que estén siempre a oscuras, los peces también necesitan recibir luz y será tu labor proporcionársela. Si vas a tener plantas este punto también es muy relevante.</p>
-            <h6>Alimentación:</h6> <p>Da de comer a tus peces pero tampoco les sobrealimentes. Busca la mejor alimentación para ellos y sigue las recomendaciones en cuanto a cantidades.</p>
-            <h6>Veterinario:</h6> <p>Acude a tu clínica veterinaria siempre que sea necesario, resuelve dudas y cuida del animal evitando que enferme.</p>
-          </Accordion.Body>
-        </Accordion.Item>
+        
       </Accordion>
 
+      <CDBFooter className="shadow">
+        <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
+          <CDBBox display="flex" justifyContent="between" className="flex-wrap">
+            <CDBBox>
+              <a href="" className="d-flex align-items-center p-0 text-dark">
+                <img alt="logo" src="logo" width="30px" />
+                <span className="ml-3 h5 font-weight-bold">Devwares</span>
+              </a>
+              <p className="my-3" style={{ width: '250px' }}>
+                We are creating High Quality Resources and tools to Aid developers during the
+                developement of their projects
+              </p>
+            </CDBBox>
+            <CDBBox>
+              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+                Devwares
+              </p>
+              <CDBBox flex="column" display="flex" style={{ cursor: 'pointer', padding: '0' }}>
+                <CDBFooterLink href="/">Resources</CDBFooterLink>
+                <CDBFooterLink href="/">About Us</CDBFooterLink>
+                <CDBFooterLink href="/">Contact</CDBFooterLink>
+                <CDBFooterLink href="/">Blog</CDBFooterLink>
+              </CDBBox>
+            </CDBBox>
+            <CDBBox>
+              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+                Ayuda
+              </p>
+              <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+                <CDBFooterLink href="/">Support</CDBFooterLink>
+                <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                <CDBFooterLink href="/">Sign In</CDBFooterLink>
+              </CDBBox>
+            </CDBBox>
+            <CDBBox>
+              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+                Productos
+              </p>
+              <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+                <CDBFooterLink href="/">Windframe</CDBFooterLink>
+                <CDBFooterLink href="/">Loop</CDBFooterLink>
+                <CDBFooterLink href="/">Contrast</CDBFooterLink>
+              </CDBBox>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox
+            display="flex"
+            justifyContent="center"
+            style={{ width: '100%' }}
+            className="mx-auto mt-4"
+          >
+            <CDBBtn flat color="dark" className="p-2">
+              <CDBIcon fab icon="facebook-f" />
+            </CDBBtn>
+            <CDBBtn flat color="dark" className="mx-3 p-2">
+              <CDBIcon fab icon="twitter" />
+            </CDBBtn>
+            <CDBBtn flat color="dark" className="p-2">
+              <CDBIcon fab icon="instagram" />
+            </CDBBtn>
+          </CDBBox>
+          <small className="text-center mt-5">&copy; CureFrish, 2022. Todos los derechos reservados.</small>
+        </CDBBox>
+      </CDBFooter>
 
     </>
 
