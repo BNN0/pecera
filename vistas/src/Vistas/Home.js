@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Accordion from 'react-bootstrap/Accordion';
 import Badge from 'react-bootstrap/Badge';
+import Foto from '../imagenes/tipscuidado.svg'
 
 import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
 
@@ -89,6 +90,7 @@ function NavScrollExample() {
         <Carousel.Item>
           <img
             className="d-block w-100"
+            //src={Foto}
             src="https://wowslider.com/sliders/demo-80/data1/images/plumage176723_1920.jpg"
             alt="First slide"
           />
