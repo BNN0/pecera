@@ -28,27 +28,27 @@ function NavScrollExample() {
             Options
           </Button>
 
-          <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Publicaciones</Nav.Link>
-                <Nav.Link href="#action2">Monitoreo</Nav.Link>
-                <NavDropdown
-                  title="otros"
-                >
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
+            <Offcanvas show={show} onHide={handleClose}>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="#action1">Publicaciones</Nav.Link>
+                  <Nav.Link href="#action2">Monitoreo</Nav.Link>
+                  <NavDropdown
+                    title="otros"
+                  >
+                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+                <Form className="d-flex">
+                  <Form.Control
+                    type="search"
                   placeholder="Buscar"
                   className="me-2"
                   aria-label="Search"
@@ -123,7 +123,7 @@ function NavScrollExample() {
         </Carousel.Item>
       </Carousel>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'auto' }}>
         <h2 > Conocenos <Badge bg="secondary">Ahora</Badge></h2>
       </div>
 
