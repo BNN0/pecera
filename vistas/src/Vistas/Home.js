@@ -7,6 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Accordion from 'react-bootstrap/Accordion';
+import Badge from 'react-bootstrap/Badge';
 
 
 function NavScrollExample() {
@@ -25,15 +27,12 @@ function NavScrollExample() {
           </Button>
 
           <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-            </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
+                <Nav.Link href="#action1">Publicaciones</Nav.Link>
+                <Nav.Link href="#action2">Monitoreo</Nav.Link>
                 <NavDropdown
-                  title="Dropdown"
+                  title="otros"
                 >
                   <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
@@ -48,11 +47,11 @@ function NavScrollExample() {
               <Form className="d-flex">
                 <Form.Control
                   type="search"
-                  placeholder="Search"
+                  placeholder="Buscar"
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success">Buscar</Button>
               </Form>
             </Offcanvas.Body>
           </Offcanvas>
@@ -88,42 +87,71 @@ function NavScrollExample() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://www.wikihow.com/images_en/thumb/4/42/Take-Care-of-Your-Fish-Step-19-Version-2.jpg/v4-1200px-Take-Care-of-Your-Fish-Step-19-Version-2.jpg"
-            alt="First slide" width={50} height={550}
+            src="https://wowslider.com/sliders/demo-80/data1/images/plumage176723_1920.jpg"
+            alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h2>Tips y cuidados</h2>
+            <p>Te mostramos como cuidar a tus mascotas </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="https://wowslider.com/sliders/demo-80/data1/images/sheet546475_1920.jpg"
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Ordena tu pecera</h2>
+            <p>No pierdas la oportunidad de que este producto sea tuyo.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="https://wowslider.com/sliders/demo-80/data1/images/nature497978_1920.jpg"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h2>Otras articulos para el mantenimiento de tu pecera</h2>
+            <p>¡El cuidado del hogar de tus mascotas también es importante!</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
+        <h2 > Conocenos <Badge bg="secondary">Ahora</Badge></h2>
+      </div>
+
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>¿Quienes somos?</Accordion.Header>
+          <Accordion.Body>
+          <p>CureFish es una empresa mexicana especializada en la importación de productos de calidad para acuarios y acuicultura con más de 10 años de experiencia.</p>
+
+          <p>Contamos con artículos, los cuales cuentan con la certificaciones de las normas oficiales mexicanas aplicables, lo cual asegura que usted adquirirá sólo productos con los estándares de calidad más altos disponibles en el mercado. Le ofrecemos el mejor servicio, calidad de empaque, inventarios suficientes para proveer todas las necesidades en el cuidado de sus peces.</p>
+
+          <p>presentando ahora el más novedoso diseño de una pecera inteligente capaz de monitorear y alimentar automaticamente lo que le facilitara el cuidado de sus mascotas.</p>
+
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Tips y más sobre el cuidado de tus peces</Accordion.Header>
+          <Accordion.Body>
+            <h6>Información:</h6> <p>Antes de nada, acude a un centro veterinario especializado para informarte de los cuidados que requiere esa especie en concreto, y no te lances si no estás seguro de poder cumplir con todo lo necesario.</p> 
+            <h6>Acuario:</h6> <p>El tamaño del acuario es tan importante como para nosotros el de nuestra cama. Busca acuarios adecuados para las especies que quieres tener. Recuerda, siempre ir al tamaño más grande que te puedas permitir.</p> 
+            <h6>Agua limpia:</h6> <p>A todos nos gusta tener nuestra casa limpia, ¿verdad? Procura mantener el agua de los peces en perfecto estado para que puedan estar cómodos y disfrutar. Además la calidad del agua va a determinar el buen estado de salud del pez.</p>
+            <h6>Renovación del agua:</h6> <p>Se recomienda cambiar el 30% del agua de la pecera un par de veces por semana.</p>
+            <h6>Bomba de aire y filtro:</h6> <p>Los peces respiran oxígeno del agua, por lo que es esencial que tengan todo el que necesitan. Infórmate de qué necesita tu pez e instala la bomba necesaria.  Dependiendo de especies y tamaño también puede ser que necesites un filtro que depure y oxigene el agua.</p>
+            <h6>Temperatura:</h6> <p>¿Son peces de agua fría o de agua cálida? Tenlo claro y mantenlos a la temperatura adecuada.</p>
+            <h6>Iluminación:</h6> <p>No dejes que estén siempre a oscuras, los peces también necesitan recibir luz y será tu labor proporcionársela. Si vas a tener plantas este punto también es muy relevante.</p>
+            <h6>Alimentación:</h6> <p>Da de comer a tus peces pero tampoco les sobrealimentes. Busca la mejor alimentación para ellos y sigue las recomendaciones en cuanto a cantidades.</p>
+            <h6>Veterinario:</h6> <p>Acude a tu clínica veterinaria siempre que sea necesario, resuelve dudas y cuida del animal evitando que enferme.</p>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
 
 
     </>
