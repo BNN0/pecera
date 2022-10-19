@@ -28,27 +28,27 @@ function Home() {
             Options
           </Button>
 
-            <Offcanvas show={show} onHide={handleClose}>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Publicaciones</Nav.Link>
-                  <Nav.Link href="#action2">Monitoreo</Nav.Link>
-                  <NavDropdown
-                    title="otros"
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="publicaciones">Publicaciones</Nav.Link>
+                <Nav.Link  href='monitoreo'>Monitoreo</Nav.Link>
+                <NavDropdown
+                  title="otros"
+                >
+                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action5">
+                    Something else here
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <Form className="d-flex">
+                <Form.Control
+                  type="search"
                   placeholder="Buscar"
                   className="me-2"
                   aria-label="Search"
@@ -58,7 +58,7 @@ function Home() {
             </Offcanvas.Body>
           </Offcanvas>
 
-          <Navbar.Brand className='ms-3' href="#">CureFish</Navbar.Brand>
+          <Navbar.Brand  className='ms-3' href="home">CureFish</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -66,16 +66,6 @@ function Home() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <NavDropdown title="Dispositivo" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Pecera1</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Pecera2
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  ¿Nueva pecera?
-                </NavDropdown.Item>
-              </NavDropdown>
             </Nav>
             <Form className="d-flex">
               <Button href='login' variant="outline-info">Iniciar sesión</Button>
@@ -126,13 +116,13 @@ function Home() {
 
 
       <CDBContainer>
-      <CDBBox tag="span">Span</CDBBox>
-      <CDBBox tag="div">Div</CDBBox>
-      <CDBBox tag="p">Paragraph</CDBBox>
-      <CDBBox tag="section">Section</CDBBox>
-    </CDBContainer>
+        <CDBBox tag="span">Span</CDBBox>
+        <CDBBox tag="div">Div</CDBBox>
+        <CDBBox tag="p">Paragraph</CDBBox>
+        <CDBBox tag="section">Section</CDBBox>
+      </CDBContainer>
 
-    
+
 
       <CDBFooter className="shadow">
         <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
@@ -152,9 +142,9 @@ function Home() {
                 Devwares
               </p>
               <CDBBox flex="column" display="flex" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Resources</CDBFooterLink>
-                <CDBFooterLink href="/">About Us</CDBFooterLink>
-                <CDBFooterLink href="/">Contact</CDBFooterLink>
+                <CDBFooterLink href="/">Recurso</CDBFooterLink>
+                <CDBFooterLink href="/">Acerca de Nosotros</CDBFooterLink>
+                <CDBFooterLink href="/">Contacto</CDBFooterLink>
                 <CDBFooterLink href="/">Blog</CDBFooterLink>
               </CDBBox>
             </CDBBox>
@@ -163,9 +153,9 @@ function Home() {
                 Ayuda
               </p>
               <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Support</CDBFooterLink>
-                <CDBFooterLink href="/">Sign Up</CDBFooterLink>
-                <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                <CDBFooterLink href="/">Soporte</CDBFooterLink>
+                <CDBFooterLink href="login">Inicia Sesión</CDBFooterLink>
+                <CDBFooterLink href="login">Registrate</CDBFooterLink>
               </CDBBox>
             </CDBBox>
             <CDBBox>
@@ -173,9 +163,9 @@ function Home() {
                 Productos
               </p>
               <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Windframe</CDBFooterLink>
-                <CDBFooterLink href="/">Loop</CDBFooterLink>
-                <CDBFooterLink href="/">Contrast</CDBFooterLink>
+                <CDBFooterLink href="/">Pecera Inteligente</CDBFooterLink>
+                <CDBFooterLink href="/">Modulo de monitoreo</CDBFooterLink>
+                <CDBFooterLink href="/">Alimento</CDBFooterLink>
               </CDBBox>
             </CDBBox>
           </CDBBox>
@@ -185,13 +175,13 @@ function Home() {
             style={{ width: '100%' }}
             className="mx-auto mt-4"
           >
-            <CDBBtn flat color="dark" className="p-2">
+            <CDBBtn href="https://facebook.com/" flat color="dark" className="p-2">
               <CDBIcon fab icon="facebook-f" />
             </CDBBtn>
-            <CDBBtn flat color="dark" className="mx-3 p-2">
+            <CDBBtn href="https://twitter.com/" flat color="dark" className="mx-3 p-2">
               <CDBIcon fab icon="twitter" />
             </CDBBtn>
-            <CDBBtn flat color="dark" className="p-2">
+            <CDBBtn href="https://instagram.com/" flat color="dark" className="p-2">
               <CDBIcon fab icon="instagram" />
             </CDBBtn>
           </CDBBox>
