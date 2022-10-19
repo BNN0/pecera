@@ -7,14 +7,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Accordion from 'react-bootstrap/Accordion';
-import Badge from 'react-bootstrap/Badge';
-import Foto from '../imagenes/tipscuidado.svg'
 
-import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
+//import Foto from '../imagenes/tipscuidado.svg'
+
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
 
 
-function NavScrollExample() {
+function Home() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -59,7 +58,7 @@ function NavScrollExample() {
             </Offcanvas.Body>
           </Offcanvas>
 
-          <Navbar.Brand className='ms-3' href="#">Peceras</Navbar.Brand>
+          <Navbar.Brand className='ms-3' href="#">CureFish</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -125,24 +124,15 @@ function NavScrollExample() {
         </Carousel.Item>
       </Carousel>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh' }}>
-        <h2 > Conocenos <Badge bg="secondary">Ahora</Badge></h2>
-      </div>
 
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>¿Quienes somos?</Accordion.Header>
-          <Accordion.Body>
-            <p>CureFish es una empresa mexicana especializada en la importación de productos de calidad para acuarios y acuicultura con más de 10 años de experiencia.</p>
+      <CDBContainer>
+      <CDBBox tag="span">Span</CDBBox>
+      <CDBBox tag="div">Div</CDBBox>
+      <CDBBox tag="p">Paragraph</CDBBox>
+      <CDBBox tag="section">Section</CDBBox>
+    </CDBContainer>
 
-            <p>Contamos con artículos, los cuales cuentan con la certificaciones de las normas oficiales mexicanas aplicables, lo cual asegura que usted adquirirá sólo productos con los estándares de calidad más altos disponibles en el mercado. Le ofrecemos el mejor servicio, calidad de empaque, inventarios suficientes para proveer todas las necesidades en el cuidado de sus peces.</p>
-
-            <p>presentando ahora el más novedoso diseño de una pecera inteligente capaz de monitorear y alimentar automaticamente lo que le facilitara el cuidado de sus mascotas.</p>
-
-          </Accordion.Body>
-        </Accordion.Item>
-        
-      </Accordion>
+    
 
       <CDBFooter className="shadow">
         <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
@@ -215,4 +205,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default Home;
