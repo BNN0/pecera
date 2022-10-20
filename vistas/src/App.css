@@ -1,3 +1,11 @@
+:root {
+  --blanco: #ffffff;
+  --obscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --gris-claro: #dfe9f3; 
+}
 
 .App {
   background-color: white;
@@ -9,6 +17,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(to top, var(--secundario) 0%, var(--blanco) 100%);
 }
 
 .Auth-form {
@@ -19,6 +28,7 @@
   border-radius: 8px;
   background-color: white;
 }
+
 
 .Auth-form-content {
   padding-left: 12%;
