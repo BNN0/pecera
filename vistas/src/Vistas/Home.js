@@ -10,7 +10,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 //import Foto from '../imagenes/tipscuidado.svg'
 
-import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
 
 
 function Home() {
@@ -113,15 +113,6 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-
-      <CDBContainer>
-        <CDBBox tag="span">Span</CDBBox>
-        <CDBBox tag="div">Div</CDBBox>
-        <CDBBox tag="p">Paragraph</CDBBox>
-        <CDBBox tag="section">Section</CDBBox>
-      </CDBContainer>
-
 
 
       <CDBFooter className="shadow">

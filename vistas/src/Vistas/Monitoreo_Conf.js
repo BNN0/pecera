@@ -4,10 +4,11 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
 import Modal from 'react-bootstrap/Modal';
+
+
 
 function Monitoreo() {
     const [show, setShow] = useState(false);
@@ -73,8 +74,8 @@ function Monitoreo() {
                                 <NavDropdown.Item href="#action4">Pecera2</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item >
-                                    
-                                    <Button id='btnNuevaPece' onClick={handleShow} variant="primary">
+
+                                    <Button onClick={handleShow} variant="primary">
                                         Nueva pecera
                                     </Button>
 
@@ -120,6 +121,7 @@ function Monitoreo() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
 
         </>
 
