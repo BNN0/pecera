@@ -61,16 +61,7 @@ function Publicaciones() {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <NavDropdown title="Dispositivo" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Pecera1</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">
-                                    Pecera2
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    ¿Nueva pecera?
-                                </NavDropdown.Item>
-                            </NavDropdown>
+
                         </Nav>
                         <Form className="d-flex">
                             <Button href='login' variant="outline-info">Iniciar sesión</Button>
