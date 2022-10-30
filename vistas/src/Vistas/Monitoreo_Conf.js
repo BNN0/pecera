@@ -8,6 +8,8 @@ import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Modal from 'react-bootstrap/Modal';
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 function Monitoreo() {
@@ -121,6 +123,13 @@ function Monitoreo() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            <DropdownButton id="dropdown-basic-button" title="Visualizar">
+                <Dropdown.Item href="#/action-1">Temperatura</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">suciedad</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Nivel de agua</Dropdown.Item>
+            </DropdownButton>
+
 
 
         </>

@@ -5,8 +5,7 @@ import Login from "./Vistas/Auth"
 import Home from "./Vistas/Home"
 import Monitoreo from "./Vistas/Monitoreo_Conf"
 import Publicaciones from "./Vistas/Publicaciones"
-
-
+import ResponsiveDrawer from "./Vistas/Monitoreo/Temp"
 
 
 function App() {
@@ -20,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/monitoreo" element={<Monitoreo />} />
         <Route path="/publicaciones" element={<Publicaciones />} />
+        <Route path="/barra" element={<ResponsiveDrawer />} />
+    
 
       </Routes>
      
