@@ -32,7 +32,7 @@ function Publicaciones() {
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link href="publicaciones">Publicaciones</Nav.Link>
-                                <Nav.Link href="monitoreo">Monitoreo</Nav.Link>
+                                <Nav.Link href="monitoreoo">Monitoreo</Nav.Link>
                                 <NavDropdown
                                     title="otros"
                                 >
