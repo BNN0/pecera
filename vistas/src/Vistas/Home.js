@@ -13,11 +13,8 @@ import uwu from "../imagenes/uwu.png"
 
 //import Foto from '../imagenes/tipscuidado.svg'
 
-<<<<<<< HEAD
 import { CDBFooter, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
-=======
-import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
->>>>>>> 53d89984db4e15fdd3a6481ed339230ba2713447
+
 
 
 function Home() {
@@ -139,7 +136,7 @@ function Home() {
             y alimentar automaticamente, lo que le facilitará el cuidado de sus mascotas</p>
         </div>
 
-<<<<<<< HEAD
+
         <div className='derecha'>
         <p>aaaaa</p>
         </div>
@@ -150,8 +147,7 @@ function Home() {
        
       </CDBContainer>
 
-=======
->>>>>>> 53d89984db4e15fdd3a6481ed339230ba2713447
+
       <CDBFooter className="shadow">
         <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
           <CDBBox display="flex" justifyContent="between" className="flex-wrap">
