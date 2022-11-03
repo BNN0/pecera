@@ -7,8 +7,6 @@ import Monitoreo from "./Vistas/Monitoreo_Conf"
 import Publicaciones from "./Vistas/Publicaciones"
 
 
-
-
 function App() {
   return (
    <>

@@ -1,7 +1,8 @@
 
 import React, { useState } from "react"
+import logo from "../imagenes/logo.png"
 
-export default function Login (props) {
+export default function Login(props) {
 
 
   let [authMode, setAuthMode] = useState("signin")
@@ -15,6 +16,17 @@ export default function Login (props) {
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
+            <div className="div-img">
+              <img
+                id="logo"
+
+                //src={Foto}
+                src={logo}
+                alt="First slide"
+
+              />
+            </div>
+
             <h3 className="Auth-form-title">Inicia sesión</h3>
             <div className="text-center">
               ¿Aun no te registras?{" "}
@@ -48,12 +60,19 @@ export default function Login (props) {
       </div>
     )
   }
-
   return (
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Registrate</h3>
+          <div className="div-img">
+              <img
+                id="logo"
+                src={logo}
+                alt="First slide"
+
+              />
+            </div>
           <div className="text-center">
             ¿Ya tienes una cuenta?{" "}
             <span className="link-primary" onClick={changeAuthMode}>
