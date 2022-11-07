@@ -87,7 +87,7 @@ function Publicaciones() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="publiuno" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>

@@ -7,6 +7,7 @@ import Home from "./Vistas/Home"
 import Publicaciones from "./Vistas/Publicaciones"
 
 import Monitoreoo from "./Vistas/Monitoreo/Monitoreoo"
+import Publicacionuno from "./Vistas/publicaciones/Publicacion1"
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/publicaciones" element={<Publicaciones />} />
         <Route path="/monitoreoo" element={<Monitoreoo />} />
+
+        <Route path="/publiuno" element={<Publicacionuno />} />
     
 
       </Routes>
