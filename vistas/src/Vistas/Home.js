@@ -7,10 +7,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import beta from "../imagenes/beta.png"
+import peces from "../imagenes/peces.png"
+import uwu from "../imagenes/uwu.png"
 
 //import Foto from '../imagenes/tipscuidado.svg'
 
-import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
+import { CDBFooter, CDBBtn, CDBIcon, CDBBox, CDBContainer } from 'cdbreact';
+
 
 
 function Home() {
@@ -32,7 +36,7 @@ function Home() {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="publicaciones">Publicaciones</Nav.Link>
-                <Nav.Link  href='monitoreo'>Monitoreo</Nav.Link>
+                <Nav.Link  href='monitoreoo'>Monitoreo</Nav.Link>
                 <NavDropdown
                   title="otros"
                 >
@@ -74,13 +78,14 @@ function Home() {
         </Container>
       </Navbar>
 
-
+      <div className='carrousel'>
       <Carousel fade>
         <Carousel.Item>
           <img
+          id="beta"
             className="d-block w-100"
             //src={Foto}
-            src="https://wowslider.com/sliders/demo-80/data1/images/plumage176723_1920.jpg"
+            src={beta}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -90,8 +95,9 @@ function Home() {
         </Carousel.Item>
         <Carousel.Item>
           <img
+          id="peces"
             className="d-block w-100"
-            src="https://wowslider.com/sliders/demo-80/data1/images/sheet546475_1920.jpg"
+            src={peces}
             alt="Second slide"
           />
 
@@ -102,8 +108,9 @@ function Home() {
         </Carousel.Item>
         <Carousel.Item>
           <img
+          id="uwu"
             className="d-block w-100"
-            src="https://wowslider.com/sliders/demo-80/data1/images/nature497978_1920.jpg"
+            src={uwu}
             alt="Third slide"
           />
 
@@ -113,52 +120,39 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      </div>
+
+      <div className="contenido">
+        
+        <div className='izquierda'>
+          <h2>¿Quienes Somos?</h2>
+          <p>CureFish es una empresa mexicana especializada en la importación de productos de 
+            calidad para acuarios y acuicultura con más de 10 años de experiencia Contamos con 
+            artículos, los cuales cuentan con la certificaciones de las normas oficiales mexicanas 
+            aplicables, lo cual asegura que usted adquirirá sólo productos con los estánda calidad 
+            más altos disponibles en el mercado. Le ofrecemos el mejor servicio, calidad de empaque, 
+            inventarios suficientes para proveer todas las necesidades en el cuidado de sus peces.
+            Presentando ahora el más novedoso diseño de una pecera inteligente capaz de monitorear 
+            y alimentar automaticamente, lo que le facilitará el cuidado de sus mascotas</p>
+        </div>
+
+
+        <div className='derecha'>
+        <p>aaaaa</p>
+        </div>
+       
+      </div>
+     
+      <CDBContainer>
+       
+      </CDBContainer>
 
 
       <CDBFooter className="shadow">
         <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
           <CDBBox display="flex" justifyContent="between" className="flex-wrap">
-            <CDBBox>
-              <a href="/" className="d-flex align-items-center p-0 text-dark">
-                <img alt="logo" src="logo" width="30px" />
-                <span className="ml-3 h5 font-weight-bold">Devwares</span>
-              </a>
-              <p className="my-3" style={{ width: '250px' }}>
-                We are creating High Quality Resources and tools to Aid developers during the
-                developement of their projects
-              </p>
-            </CDBBox>
-            <CDBBox>
-              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                Devwares
-              </p>
-              <CDBBox flex="column" display="flex" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Recurso</CDBFooterLink>
-                <CDBFooterLink href="/">Acerca de Nosotros</CDBFooterLink>
-                <CDBFooterLink href="/">Contacto</CDBFooterLink>
-                <CDBFooterLink href="/">Blog</CDBFooterLink>
-              </CDBBox>
-            </CDBBox>
-            <CDBBox>
-              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                Ayuda
-              </p>
-              <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Soporte</CDBFooterLink>
-                <CDBFooterLink href="login">Inicia Sesión</CDBFooterLink>
-                <CDBFooterLink href="login">Registrate</CDBFooterLink>
-              </CDBBox>
-            </CDBBox>
-            <CDBBox>
-              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                Productos
-              </p>
-              <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-                <CDBFooterLink href="/">Pecera Inteligente</CDBFooterLink>
-                <CDBFooterLink href="/">Modulo de monitoreo</CDBFooterLink>
-                <CDBFooterLink href="/">Alimento</CDBFooterLink>
-              </CDBBox>
-            </CDBBox>
+         
+           
           </CDBBox>
           <CDBBox
             display="flex"

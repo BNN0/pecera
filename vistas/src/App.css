@@ -43,8 +43,74 @@
   font-weight: 800;
 }
 
+.derecha{
+  background-color: white;
+  width: 1000px;
+  height: 100px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+.izquierda{
+  background-color: antiquewhite;
+  width: 1000px;
+  height: 300px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+.carrousel{
+  background-color: white;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.contenido {
+  background-color: white;
+  box-sizing: border-box;
+  border: 1 px solid #d9d9d9;
+  height: 50vh;
+  margin: 5px;
+  padding: 15px;
+  display: flex;
+  
+}
+
 label {
   font-size: 14px;
   font-weight: 600;
   color: rgb(34, 34, 34);
+}
+
+#logo{
+  align-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.div-img{
+  align-content: center;
+  text-align: center;
+
+}
+
+#beta{
+  height: 600px;
+  width: 50px;
+}
+
+#peces{
+  height: 600px;
+  width: 500px;
+}
+
+#uwu{
+  height: 600px;
+  width: 50px;
 }
