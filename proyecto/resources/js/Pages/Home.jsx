@@ -7,9 +7,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import beta from "../imagenes/beta.png"
-import peces from "../imagenes/peces.png"
-import uwu from "../imagenes/uwu.png"
+import beta from '/resources/img/beta.png'
+import peces from "/resources/img/peces.png"
+import uwu from "/resources/img/uwu.png"
 
 //import Foto from '../imagenes/tipscuidado.svg'
 
