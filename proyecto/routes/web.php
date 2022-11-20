@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Htpp\Controllers\DispositivoController;
+use App\Htpp\Controllers\RenderizadoController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,7 +28,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Monitor');
+    return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 /*
@@ -33,9 +36,21 @@ Route::get('/home', function () {
     return Inertia::render('Home');
 });
 
-*/
 
-Route::get('/publicaciones', function () {
+
+Route::get('/render', function(){
     return Inertia::render('Published_main');
 });
+*/
+
+
+
+Route::resource('renderizados', RenderizadoController::class)
+    ->only(['index']);
+
+//Para los dispositivos que se vayan a registrar
+Route::resource('dispositivos', DispositivoController::class)
+    ->only(['store'])
+    ->middleware(['auth', 'verified']);
+
 require __DIR__.'/auth.php';
