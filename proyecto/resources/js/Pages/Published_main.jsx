@@ -11,70 +11,13 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { CDBBtn, CDBContainer } from "cdbreact";
 
+import { Head } from '@inertiajs/inertia-react';
 
 function Publicaciones() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
     return (
         <>
-            <Navbar bg="dark" variant="dark">
-                <Container fluid>
-
-                    <Button variant="outline-info" onClick={handleShow}>
-                        Options
-                    </Button>
-
-                    <Offcanvas show={show} onHide={handleClose}>
-                        <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link href="publicaciones">Publicaciones</Nav.Link>
-                                <Nav.Link href="monitoreoo">Monitoreo</Nav.Link>
-                                <NavDropdown
-                                    title="otros"
-                                >
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
-                                        Another action
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action5">
-                                        Something else here
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-                            <Form className="d-flex">
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Buscar"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-success">Buscar</Button>
-                            </Form>
-                        </Offcanvas.Body>
-                    </Offcanvas>
-
-                    <Navbar.Brand className='ms-3' href="home">CureFish</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="me-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
-                        >
-
-                        </Nav>
-                        <Form className="d-flex">
-                            <Button href='login' variant="outline-info">Iniciar sesión</Button>
-                        </Form>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-
+            <Head title="Publicaciones" />
+        
             <CardGroup>
                 <Card>
                     <Card.Img variant="top" src="https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/5a02f8d85cafe85f640fac80/pez-payaso-azul.jpg" />

@@ -13,6 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::create('devices', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('serial');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,5 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('devices');
     }
 };

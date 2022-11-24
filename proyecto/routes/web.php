@@ -1,11 +1,9 @@
 <?php
-
-
-use App\Htpp\Controllers\DispositivoController;
-use App\Htpp\Controllers\RenderizadoController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\RenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,16 +39,21 @@ Route::get('/home', function () {
 Route::get('/render', function(){
     return Inertia::render('Published_main');
 });
-*/
 
 
 
-Route::resource('renderizados', RenderizadoController::class)
-    ->only(['index']);
+
+
 
 //Para los dispositivos que se vayan a registrar
 Route::resource('dispositivos', DispositivoController::class)
     ->only(['store'])
     ->middleware(['auth', 'verified']);
+*/
+
+Route::resource('device', DeviceController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']);
+
 
 require __DIR__.'/auth.php';

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dispositivo;
+use App\Models\Device;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
-class DispositivoController extends Controller
+class DeviceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +16,10 @@ class DispositivoController extends Controller
     public function index()
     {
         //
+        //return 'Hola Mundo';
+        return Inertia::render('Monitor', [
+            'devices' => Device::with('user:id,name')->latest()->get(),
+        ]);
     }
 
     /**
@@ -25,7 +30,6 @@ class DispositivoController extends Controller
     public function create()
     {
         //
-        
     }
 
     /**
@@ -38,22 +42,21 @@ class DispositivoController extends Controller
     {
         //
         $validated = $request->validate([
-            'id_usuario' => 'required|string|max:255',
             'serial' => 'required|string|max:255',
         ]);
-
-        $request->user()->dispositivos()->create($validated);
-
-        return redirect(route('dispositivo.index'));
+ 
+        $request->user()->devices()->create($validated);
+ 
+        return redirect(route('device.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Dispositivo  $dispositivo
+     * @param  \App\Models\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function show(Dispositivo $dispositivo)
+    public function show(Device $device)
     {
         //
     }
@@ -61,10 +64,10 @@ class DispositivoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Dispositivo  $dispositivo
+     * @param  \App\Models\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dispositivo $dispositivo)
+    public function edit(Device $device)
     {
         //
     }
@@ -73,10 +76,10 @@ class DispositivoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Dispositivo  $dispositivo
+     * @param  \App\Models\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dispositivo $dispositivo)
+    public function update(Request $request, Device $device)
     {
         //
     }
@@ -84,10 +87,10 @@ class DispositivoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Dispositivo  $dispositivo
+     * @param  \App\Models\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dispositivo $dispositivo)
+    public function destroy(Device $device)
     {
         //
     }

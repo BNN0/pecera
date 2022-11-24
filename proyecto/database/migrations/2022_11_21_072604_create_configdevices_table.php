@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dispositivos', function (Blueprint $table) {
+        Schema::create('configdevices', function (Blueprint $table) {
             $table->id();
-            $table->string('id_usuario');
-            $table->string('serial');
+            $table->string('id_device');
+            $table->string('time_food');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dispositivos');
+        Schema::dropIfExists('configdevices');
     }
 };

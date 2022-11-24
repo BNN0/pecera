@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Renderizado;
+use App\Models\Configdevice;
 use Illuminate\Http\Request;
 
-class RenderizadoController extends Controller
+class ConfigdeviceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,6 @@ class RenderizadoController extends Controller
     public function index()
     {
         //
-        return Inertia::render('Published_main');
     }
 
     /**
@@ -42,10 +41,10 @@ class RenderizadoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Renderizado  $renderizado
+     * @param  \App\Models\Configdevice  $configdevice
      * @return \Illuminate\Http\Response
      */
-    public function show(Renderizado $renderizado)
+    public function show(Configdevice $configdevice)
     {
         //
     }
@@ -53,10 +52,10 @@ class RenderizadoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Renderizado  $renderizado
+     * @param  \App\Models\Configdevice  $configdevice
      * @return \Illuminate\Http\Response
      */
-    public function edit(Renderizado $renderizado)
+    public function edit(Configdevice $configdevice)
     {
         //
     }
@@ -65,10 +64,10 @@ class RenderizadoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Renderizado  $renderizado
+     * @param  \App\Models\Configdevice  $configdevice
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Renderizado $renderizado)
+    public function update(Request $request, Configdevice $configdevice)
     {
         //
     }
@@ -76,10 +75,10 @@ class RenderizadoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Renderizado  $renderizado
+     * @param  \App\Models\Configdevice  $configdevice
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Renderizado $renderizado)
+    public function destroy(Configdevice $configdevice)
     {
         //
     }

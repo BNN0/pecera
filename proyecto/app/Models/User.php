@@ -42,8 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function dispositivos()
+    public function devices()
     {
-        return $this->hasMany(Dispositivo::class);
+        return $this->hasMany(Device::class);
     }
 }

@@ -24,8 +24,8 @@ export default function Authenticated({ auth, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-                                <NavLink href={route('renderizados.index')} active={route().current('renderizados.index')}>
-                                    Publicaciones
+                                <NavLink href={route('device.index')} active={route().current('device.index')}>
+                                    Monitoreo
                                 </NavLink>
                             </div>
                         </div>
@@ -97,8 +97,8 @@ export default function Authenticated({ auth, header, children }) {
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href={route('renderizados.index')} active={route().current('renderizados.index')}>
-                            Publicaciones
+                        <ResponsiveNavLink href={route('device.index')} active={route().current('device.index')}>
+                            Monitoreo
                         </ResponsiveNavLink>
                     </div>
 
