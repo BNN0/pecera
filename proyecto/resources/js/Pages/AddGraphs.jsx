@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-class App extends Component {
+
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -32,8 +38,7 @@ class App extends Component {
               options={this.state.options}
               series={this.state.series}
               type="line"
-              width="750"
-              height="300"
+              
             />
           </div>
         </div>
@@ -42,4 +47,35 @@ class App extends Component {
   }
 }
 
-export default App;
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}

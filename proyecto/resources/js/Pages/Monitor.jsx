@@ -43,7 +43,7 @@ import Form from 'react-bootstrap/Form';
 
 import App from './AddGraphs';
 
-export default function Monitor({ auth, devices }) {
+export default function Monitor({ auth, devices, registers }) {
 
     const { data, setData, post, processing, reset, errors } = useForm({
         serial: '',
@@ -114,13 +114,16 @@ export default function Monitor({ auth, devices }) {
                         >
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                    <Tab icon={<Update/>} {...a11yProps(0)} />
-                                    <Tab icon={<AddCircleIcon/>} {...a11yProps(1)} />
-                                    <Tab icon={<Settings/>} {...a11yProps(2)} />
+                                    <Tab icon={<Update />} {...a11yProps(0)} />
+                                    <Tab icon={<AddCircleIcon />} {...a11yProps(1)} />
+                                    <Tab icon={<Settings />} {...a11yProps(2)} />
                                 </Tabs>
                             </Box>
                             <TabPanel value={value} index={0}>
-                                Item One
+                                <p>Temperatura:</p>
+                                <p>Nivel de agua:</p>
+                                <p>Indicador de suciedad:</p>
+                                <Tab></Tab>
                             </TabPanel>
                             <TabPanel value={value} index={1}>
                                 <form onSubmit={submit}>
@@ -131,7 +134,7 @@ export default function Monitor({ auth, devices }) {
                                         className="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                                     ></input>
                                     <InputError message={errors.serial} className="mt-2" />
-                                    <PrimaryButton className="mt-4" discable={processing}>Registrar</PrimaryButton>
+                                    <PrimaryButton className="mt-4" discable={processing}>Registrar dispositivo</PrimaryButton>
                                 </form>
                             </TabPanel>
                         </Box>
@@ -140,13 +143,19 @@ export default function Monitor({ auth, devices }) {
                     <Grid item xs={12} md={8}>
                         <Box
                             sx={{ p: 0, border: '1px dashed grey' }}>
-                                <App/>
+                            <App datos={
+                                ["hola","dos"]
+                            } 
+                            series={
+                                "adios"
+                            }/>
                         </Box>
                     </Grid>
                     {/*Tablas*/}
                     <Grid item xs={12}>
                         <Box
                             sx={{ p: 12, border: '1px dashed grey' }}>
+                                
                         </Box>
                     </Grid>
                 </Grid>

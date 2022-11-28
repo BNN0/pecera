@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Register;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class RegisterController extends Controller
 {
@@ -15,6 +16,9 @@ class RegisterController extends Controller
     public function index()
     {
         //
+        return Inertia::render('Monitor', [
+            'registers' => Register::whit()->get(),
+        ]);
     }
 
     /**

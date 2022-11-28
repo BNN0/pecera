@@ -14,5 +14,11 @@ class Register extends Model
         'temperatura',
         'suciedad',
         'nivel_agua',
+        'created_at',
     ];
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
+    }
 }

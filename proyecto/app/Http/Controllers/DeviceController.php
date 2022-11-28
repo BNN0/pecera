@@ -15,10 +15,9 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        //
-        //return 'Hola Mundo';
+        
         return Inertia::render('Monitor', [
-            'devices' => Device::with('user:id,name')->latest()->get(),
+            'devices' => Device::with('user:id')->where('user_id', auth()->user()->id)->get(),
         ]);
     }
 

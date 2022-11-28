@@ -13,6 +13,10 @@ class Device extends Model
         'serial',
     ];
 
+    public function registers(){
+        return $this->hasMany(Register::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

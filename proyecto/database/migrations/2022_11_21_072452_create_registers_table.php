@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             $table->id();
-            $table->string('id_device');
+            $table->foreignId('device_id')->constrained()->cascadeOnDelete();
             $table->string('temperatura');
             $table->string('suciedad');
             $table->string('nivel_agua');
