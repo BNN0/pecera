@@ -15,10 +15,6 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
-        return Inertia::render('Monitor', [
-            'registers' => Register::whit()->get(),
-        ]);
     }
 
     /**

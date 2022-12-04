@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 
-export default class App extends Component {
+export default class Temperature extends Component {
   constructor(props) {
     super(props);
 
@@ -17,13 +17,17 @@ export default class App extends Component {
           id: "basic-bar"
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          categories: props.fechas,
+        },
+        yaxis: {
+          
         }
       },
       series: [
         {
           name: "series-1",
-          data: [30, 40, 45, 50, 49, 60, 70, 91]
+          type: 'column',
+          data: props.datos
         }
       ]
     };

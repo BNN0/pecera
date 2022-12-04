@@ -43,7 +43,7 @@ function Home() {
             >
             </Nav>
             <Form className="d-flex">
-              <Button href='dashboard' variant="outline-info">Modulo</Button>
+              <Button href='device' variant="outline-info">Modulo</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

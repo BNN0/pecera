@@ -3,7 +3,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DeviceController;
-use App\Http\Controllers\RenderController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,34 +26,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Monitoreo');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-/*
-Route::get('/home', function () {
-    return Inertia::render('Home');
-});
-
-
-
-Route::get('/render', function(){
-    return Inertia::render('Published_main');
-});
-
-
-
-
-
-
-//Para los dispositivos que se vayan a registrar
-Route::resource('dispositivos', DispositivoController::class)
-    ->only(['store'])
-    ->middleware(['auth', 'verified']);
-*/
 
 Route::resource('device', DeviceController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
-
 
 require __DIR__.'/auth.php';

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Device;
+use App\Models\Register;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -18,6 +19,7 @@ class DeviceController extends Controller
         
         return Inertia::render('Monitor', [
             'devices' => Device::with('user:id')->where('user_id', auth()->user()->id)->get(),
+            'registers' => Register::with('device:id')->get(),
         ]);
     }
 

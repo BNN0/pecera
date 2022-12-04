@@ -25,6 +25,9 @@ import { blue } from '@mui/material/colors';
 import Settings from '@mui/icons-material/Settings';
 import Update from '@mui/icons-material/Update';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import Opacity from '@mui/icons-material/Opacity';
+import Thermostat from '@mui/icons-material/Thermostat';
+import Water from '@mui/icons-material/Water';
 import Modal from '@mui/material/Modal';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -32,6 +35,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import TextField from '@mui/material/TextField';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import FormControl from '@mui/material/FormControl';
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -41,13 +45,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 
-import App from './AddGraphs';
+import Temperature from './Auth/Graphs/TemperatureGraph';
+import { filter, isEmpty } from 'lodash';
+
+
 
 export default function Monitor({ auth, devices, registers }) {
+
+    const [dispositivo, setDispositivo] = useState("");
 
     const { data, setData, post, processing, reset, errors } = useForm({
         serial: '',
     });
+
+    
 
     const submit = (e) => {
         e.preventDefault();
@@ -60,11 +71,60 @@ export default function Monitor({ auth, devices, registers }) {
         setValue(newValue);
     };
 
-    const [dato, setDato] = useState(0);
-    const datoSet = (valor) => {
-        setDato(valor);
-    }
 
+    const formatoFecha = (fecha) => {
+        let newDate = new Date(fecha);
+        let cDate = newDate.getDate() + '/' +
+            (newDate.getMonth() + 1) + '/' +
+            newDate.getFullYear();
+        return (cDate);
+    };
+
+    var newTemp = registers.map(register =>{
+        if(register.device_id == dispositivo){
+            if(register != '')
+            return register.temperatura;
+        }
+    })
+
+    let filTemp = newTemp.filter(function (el){
+        return el;
+    })
+
+    var newNivel = registers.map(register =>{
+        if(register.device_id == dispositivo){
+            if(register != '')
+            return register.nivel_agua;
+        }
+    })
+
+    let filNivel = newNivel.filter(function (el){
+        return el;
+    })
+
+    var newSuciedad = registers.map(register =>{
+        if(register.device_id == dispositivo){
+            if(register != '')
+            return register.suciedad;
+        }
+    })
+
+    let filSuciedad = newSuciedad.filter(function (el){
+        return el;
+    })
+
+    var newFecha = registers.map(register =>{
+        if(register.device_id == dispositivo){
+            if(register != '')
+            return formatoFecha(register.created_at);
+        }
+    })
+
+    let filFecha = newFecha.filter(function (el){
+        return el;
+    })
+
+    console.log(filFecha)
     return (
         <AuthenticatedLayout auth={auth}>
             <Head title="Monitoreo" />
@@ -72,7 +132,8 @@ export default function Monitor({ auth, devices, registers }) {
             <AppBar position="static">
                 <Toolbar variant="dense">
                     <Typography variant="h6" color="inherit" component="div">
-                        Dispositivo
+                        Dispositivo {dispositivo}
+
                     </Typography>
 
                     <Container>
@@ -83,14 +144,25 @@ export default function Monitor({ auth, devices, registers }) {
                                     <Nav
                                         className="me-auto my-2 my-lg-0"
                                         style={{ maxHeight: '100px' }}
-                                        navbarScroll
+                                        
                                     >
-                                        <NavDropdown title="Seleccionar dispositivo" id="navbarScrollingDropdown">
-                                            {devices.map(device =>
-                                                <NavDropdown.Item key={device.id}>Dipositivo {device.id}</NavDropdown.Item>
-                                            )}
+                                        
+                                            <NavDropdown
+                                                title="Seleccionar dispositivo"
+                                                id="navbarScrollingDropdown"
+                                            >
+                                                {devices.map(device =>
+                                                    <NavDropdown.Item
+                                                        key={device.id}
+                                                        onClick={()=>setDispositivo(device.id)}
+                                                        >
+                                                        Dipositivo {device.id}
+                                                    </NavDropdown.Item>
+                                                )}
 
-                                        </NavDropdown>
+                                            </NavDropdown>
+                                        
+
                                     </Nav>
                                 </Navbar.Collapse>
                             </Container>
@@ -110,52 +182,60 @@ export default function Monitor({ auth, devices, registers }) {
                                 p: 0,
                                 border: '1px dashed grey',
                                 borderRadius: 2,
-                            }}
-                        >
-                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                    <Tab icon={<Update />} {...a11yProps(0)} />
-                                    <Tab icon={<AddCircleIcon />} {...a11yProps(1)} />
-                                    <Tab icon={<Settings />} {...a11yProps(2)} />
-                                </Tabs>
-                            </Box>
-                            <TabPanel value={value} index={0}>
-                                <p>Temperatura:</p>
-                                <p>Nivel de agua:</p>
-                                <p>Indicador de suciedad:</p>
-                                <Tab></Tab>
-                            </TabPanel>
-                            <TabPanel value={value} index={1}>
-                                <form onSubmit={submit}>
-                                    <input
-                                        value={data.serial}
-                                        onChange={e => setData('serial', e.target.value)}
-                                        placeholder="Ingrese serial"
-                                        className="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                                    ></input>
-                                    <InputError message={errors.serial} className="mt-2" />
-                                    <PrimaryButton className="mt-4" discable={processing}>Registrar dispositivo</PrimaryButton>
-                                </form>
-                            </TabPanel>
+                            }}>
+                            <p>Temperatura:</p>
+                            <p>Nivel de agua:</p>
+                            <p>Indicador de suciedad:</p>
                         </Box>
                     </Grid>
                     {/*Graficas*/}
                     <Grid item xs={12} md={8}>
                         <Box
                             sx={{ p: 0, border: '1px dashed grey' }}>
-                            <App datos={
-                                ["hola","dos"]
-                            } 
-                            series={
-                                "adios"
-                            }/>
+                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                <Tabs centered value={value} onChange={handleChange} aria-label="basic tabs example">
+                                    <Tab icon={<Thermostat />} {...a11yProps(0)}/>
+                                    <Tab icon={<Opacity />} {...a11yProps(1)} />
+                                    <Tab icon={<Water />} {...a11yProps(2)} />
+                                </Tabs>
+                            </Box>
+                            <TabPanel value={value} index={0}>
+                                <Temperature
+                                    datos = {filTemp}
+                                    fechas={filFecha} />
+                            </TabPanel>
+                            <TabPanel value={value} index={1}>
+                                <Temperature
+                                    datos={filNivel}
+                                    fechas={filFecha} />
+                            </TabPanel>
+                            <TabPanel value={value} index={2}>
+                                <Temperature
+                                    datos={filSuciedad}
+                                    fechas={filFecha} />
+                            </TabPanel>
                         </Box>
                     </Grid>
-                    {/*Tablas*/}
-                    <Grid item xs={12}>
+
+                    <Grid item xs={12} md={4}>
+                        <Box
+                            sx={{ p: 6, border: '1px dashed grey' }}>
+
+                            <form onSubmit={submit}>
+                                <input
+                                    value={data.serial}
+                                    onChange={e => setData('serial', e.target.value)}
+                                    placeholder="Ingrese serial"
+                                    className="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                                ></input>
+                                <InputError message={errors.serial} className="mt-2" />
+                                <PrimaryButton className="mt-4" discable={processing}>Registrar dispositivo</PrimaryButton>
+                            </form>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={8}>
                         <Box
                             sx={{ p: 12, border: '1px dashed grey' }}>
-                                
                         </Box>
                     </Grid>
                 </Grid>
@@ -163,8 +243,6 @@ export default function Monitor({ auth, devices, registers }) {
         </AuthenticatedLayout>
     );
 }
-
-
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
