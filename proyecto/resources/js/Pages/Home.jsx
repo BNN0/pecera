@@ -106,7 +106,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="publiuno" >
+                        <CDBBtn color="primary" circle href="https://animalesexoticos24h.es/cuidar-peces-casa/#:~:text=Tenlo%20claro%20y%20mantenlos%20a,peces%20pero%20tampoco%20les%20sobrealimentes" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
@@ -122,7 +122,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.elespanol.com/como/cuidar-peces-casa-correctamente-acuario-pecera/519199214_0.amp.html" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
@@ -138,7 +138,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.clarin.com/entremujeres/hogar-y-familia/peces-pecera-acuario-plantas-accesorios-consejos-armar-instalar_0_rJfWyRFvXl.html" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
@@ -157,7 +157,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.azureussl.com/7-trucos-para-tener-peces-mas-sanos/" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
@@ -173,7 +173,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.cleanipedia.com/ar/en-casa/como-desinfectar-una-pecera-facil-y-rapidamente.html" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
@@ -188,7 +188,7 @@ function Home() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.zooplus.es/magazine/peces/tipos-de-peces/peces-de-acuario-diez-especies-favoritas" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>

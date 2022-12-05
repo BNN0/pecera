@@ -9,6 +9,11 @@ use Inertia\Inertia;
 
 class DeviceController extends Controller
 {
+protected $regFiltrados;
+
+public function __construct(Register $regFiltrados){
+    $this->regFiltrados = $regFiltrados;
+}
     /**
      * Display a listing of the resource.
      *
@@ -16,10 +21,10 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        
+        $regFiltrados = $this->regFiltrados->obtenerRegistrosFiltrados(auth()->user()->id);
         return Inertia::render('Monitor', [
             'devices' => Device::with('user:id')->where('user_id', auth()->user()->id)->get(),
-            'registers' => Register::with('device:id')->get(),
+            'registers' => $regFiltrados,//Register::where('device_id', function(Builder $query){})->get(),
         ]);
     }
 

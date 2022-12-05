@@ -74,7 +74,7 @@ export default function Monitor({ auth, devices, registers }) {
 
     const formatoFecha = (fecha) => {
         let newDate = new Date(fecha);
-        let cDate = newDate.getDate() + '/' +
+        let cDate = (newDate.getDate() + 1) + '/' +
             (newDate.getMonth() + 1) + '/' +
             newDate.getFullYear();
         return (cDate);
@@ -124,7 +124,7 @@ export default function Monitor({ auth, devices, registers }) {
         return el;
     })
 
-    console.log(filFecha)
+    console.log(registers)
     return (
         <AuthenticatedLayout auth={auth}>
             <Head title="Monitoreo" />

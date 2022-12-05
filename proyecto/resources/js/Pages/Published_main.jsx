@@ -112,7 +112,7 @@ function Publicaciones() {
                     </Card.Body>
 
                     <CDBContainer>
-                        <CDBBtn color="primary" circle href="#" >
+                        <CDBBtn color="primary" circle href="https://www.zooplus.es/magazine/peces/tipos-de-peces/peces-de-acuario-diez-especies-favoritas" >
                             Leer más
                         </CDBBtn>
                     </CDBContainer>
